@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 00:55:25 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/11 14:37:15 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:55:25 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,11 @@ int main()
     richard.introduce();
     richard.launchSpell("Polymorph", *wall);
     richard.launchSpell("Fireball", *wall);
+
+    // clean up
+    delete polymorph;
+    delete fireball;
+    delete wall;
+
+    return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 00:55:25 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/11 00:08:44 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:56:42 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,9 @@ int main()
 
     richard.forgetSpell("Fwoosh");
     richard.launchSpell("Fwoosh", bob);
+
+    // clean up
+    delete fwoosh;
+
+    return 0;
 }
