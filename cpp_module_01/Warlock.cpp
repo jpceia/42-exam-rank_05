@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 01:06:56 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/11 00:13:29 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:56:38 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void Warlock::introduce() const
 
 void Warlock::learnSpell(ASpell* spell)
 {
-    spells.push_back(spell);
+    spells.push_back(spell->clone());
 }
 
 void Warlock::forgetSpell(const std::string& spellName)
