@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 23:12:32 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/11 00:12:45 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:39:23 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,10 @@ ATarget& ATarget::operator=(const ATarget& rhs)
 
 void ATarget::getHitBySpell(const ASpell& spell) const
 {
-    std::cout << this->type << " has been" << spell.getEffects() << "!" << std::endl;
+    std::cout << this->type << " has been " << spell.getEffects() << "!" << std::endl;
+}
+
+std::string ATarget::getType() const
+{
+    return (this->type);
 }

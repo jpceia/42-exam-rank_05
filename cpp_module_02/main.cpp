@@ -6,13 +6,17 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 00:55:25 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/11 00:18:00 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:37:15 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
 #include "Dummy.hpp"
 #include "Fwoosh.hpp"
+#include "Fireball.hpp"
+#include "BrickWall.hpp"
+#include "TargetGenerator.hpp"
+#include "Polymorph.hpp"
 
 // Richard: This looks like another boring day.
 // Richard: I am Richard, Hello, I'm Richard the Warlock!!

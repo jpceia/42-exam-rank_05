@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 01:06:56 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/11 00:13:29 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/11 00:37:41 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,6 @@ Warlock::Warlock(const Warlock& rhs)
 
 Warlock::~Warlock()
 {
-    std::vector<ASpell *>::iterator it = spells.begin();
-    while (it != spells.end())
-    {
-        delete *it;
-        ++it;
-    }
     std::cout << name << ": My job here is done!" << std::endl;
 }
 
@@ -72,36 +66,21 @@ void Warlock::introduce() const
 
 void Warlock::learnSpell(ASpell* spell)
 {
-    spells.push_back(spell);
+    spellBook.learnSpell(spell);
 }
 
 void Warlock::forgetSpell(const std::string& spellName)
 {
-    std::vector<ASpell*>::iterator it = spells.begin();
-
-    while (it != spells.end())
-    {
-        if ((*it)->getName() == spellName)
-        {
-            delete *it;
-            spells.erase(it);
-            break ;
-        }
-        ++it;
-    }
+    spellBook.forgetSpell(spellName);
 }
 
 void Warlock::launchSpell(const std::string& spellName, const ATarget& target)
 {
-    std::vector<ASpell*>::iterator it = spells.begin();
+    ASpell *spell = spellBook.createSpell(spellName);
 
-    while (it != spells.end())
+    if (spell)
     {
-        if ((*it)->getName() == spellName)
-        {
-            (*it)->launch(target);
-            break ;
-        }
-        ++it;
+        spell->launch(target);
+        delete spell;
     }
 }
